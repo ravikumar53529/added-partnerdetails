@@ -1,0 +1,22 @@
+.body{
+ .body-heading{
+  width: 100%;
+  height:50px;
+ 
+  .items{
+    display: flex;
+    justify-content: space-between;
+    .body-btn{
+      width: 200px;
+      padding: 5px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+    }
+    .body-btn:hover{
+      background-color: rgb(63, 59, 59);
+    }
+  }
+ }
+}
+

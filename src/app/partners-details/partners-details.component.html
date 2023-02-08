@@ -1,0 +1,84 @@
+<div class="partner-details">
+  <div class="header">
+    <p>header</p>
+  </div>
+  <div class="body">
+    <div class="container">
+       <div class="body-heading">
+          <div class="items">
+            <div><button class="body-btn" (click)="revenue()">REVENUE</button></div>
+            <div><button class="body-btn" (click)="employees()">EMPLOYEES</button></div>
+            <div>
+               <button class="body-btn" (click)="industry()">INDUSTRY</button>
+            </div>
+          </div>
+       </div>
+    </div>
+    <div>
+      <div class="container p-5">
+        <table class="table">
+          
+            <ng-container *ngIf="revenueStatus">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Tornover</th>
+                  <th>Profit</th>
+                  <th>Cross Margin</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let data of revenueDetails">
+                <td>{{data.year}}</td>
+                <td>{{data.turnover}}</td>
+                <td>{{data.profit}}</td>
+                <td>{{data.crossmargin}}</td>
+              </tr>
+            </tbody>
+            </ng-container>
+            <ng-container *ngIf="employeeStatus">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Tornover</th>
+                  <th>Profit</th>
+                  <th>Cross Margin</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let data of employeeDetails">
+                <td>{{data.employeename}}</td>
+                <td>{{data.experience}}</td>
+                <td>{{data.domain}}</td>
+                <td>{{data.role}}</td>
+              </tr>
+              </tbody>
+            </ng-container>
+          <ng-container *ngIf="industryStatus">
+            <thead>
+              <tr>
+                <th>Branches</th>
+                <th>Headquarters</th>
+                <th>Type</th>
+                <th>Founder</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let data of industryDetails">
+              <td>{{data.branches}}</td>
+              <td>{{data.headquarters}}</td>
+              <td>{{data.type}}</td>
+              <td>{{data.founder}}</td>
+            </tr> 
+            </tbody>
+          </ng-container>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+  <div class="footer">
+    <p>footer</p>
+  </div>
+</div>
+
